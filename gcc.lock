@@ -1,0 +1,5 @@
+# The GCC release whose libstdc++ and libgcc this repository builds (recipes/fetch_gcc.sh checks the hash).
+# The same version as the container's x32 compiler: libsupc++'s ABI must match it.
+GCC_VERSION=13.3.0
+GCC_URL=https://ftp.gnu.org/gnu/gcc/gcc-13.3.0/gcc-13.3.0.tar.xz
+GCC_SHA256=0845e9621c9543a13f484e94584a49ffc0129970e9914624235fc1d061a0c083

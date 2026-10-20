@@ -1,0 +1,22 @@
+cxxrt: the C++ runtime for ported libraries on Phorepoc
+Copyright The Phorepoc Authors (see AUTHORS)
+
+Phorepoc was founded by Kyriakos Bompotis.
+
+Our files (os/src/cxxrt, recipes, registry, tests) are licensed under the Apache License 2.0 (LICENSE).
+
+Not part of this repository, fetched and built at build time (recipes/fetch_gcc.sh, recipes/build_libstdcxx.sh):
+
+- libstdc++ and libgcc from GCC 13.3.0 (https://gcc.gnu.org), copyright the Free Software Foundation, licensed
+  GPL-3.0-or-later WITH the GCC Runtime Library Exception 3.1 (LICENSES/GPL-3.0.txt, LICENSES/GCC-exception-3.1.txt, taken
+  from the GCC release). The recipe builds libstdc++.a from the unmodified GCC source (only its configure script is
+  adjusted for the cross build, and its os/newlib directory is replaced by os/generic), and packages the compiler's own
+  libgcc.a and libgcc_eh.a. The exception permits linking these runtime libraries into programs under any licence, so
+  images and libraries built with them (including the LGPL ones, such as the browser engine) are not made GPL by it. The
+  release is pinned by SHA-256 in gcc.lock.
+
+The Symbian OS and Open C headers it compiles against (EPL-1.0) come
+from the Phorepoc core repository and are not copied here. The POSIX header overlay and the compiler wrappers are the pdk's
+(tools/toolchain/openc_posix, tools/toolchain/mk_pure_wrappers.sh).
+
+Thanks to the GCC project for libstdc++ and to the Symbian Foundation for releasing the platform.
