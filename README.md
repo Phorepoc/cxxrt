@@ -31,11 +31,12 @@ The pure-Open-C compiler wrappers (`mk_pure_wrappers.sh`) and the POSIX header o
 This repository is a layer, like the adaptations: it adds its `os/` to the OS tree and its registry entries to core's.
 Inside the toolchain container (`ghcr.io/phorepoc/base`: GCC 13 with the x32 runtime, and the Arm GNU toolchain for
 `ARCH=arm`), with [core](https://github.com/Phorepoc/core) and the pdk checked out next to this repository and the include
-tree exported (`ph source export -a`):
+tree exported (`ph source export -a`). `PHOREPOC_ADAPTATIONS` names the board's adaptation, the OS tree the Open C compile
+line is derived from:
 
 ```sh
-docker run --rm -v "$PWD/..:/src" -e PHOREPOC_PDK=/src/pdk -e PHOREPOC_CORE=/src/core -e PHOREPOC_BUILD=/src/core/build \
-    -w /src/cxxrt ghcr.io/phorepoc/base bash build.sh              # ARCH=arm bash build.sh for ARM
+docker run --rm --cpus=6 -v "$PWD/..:/src" -e PHOREPOC_PDK=/src/pdk -e PHOREPOC_CORE=/src/core -e PHOREPOC_BUILD=/src/core/build \
+    -e PHOREPOC_ADAPTATIONS=/src/adaptation-x86-64 -w /src/cxxrt ghcr.io/phorepoc/base bash build.sh    # add -e ARCH=arm for ARM
 ```
 
 Output: `$PHOREPOC_BUILD/thirdparty/x86/cxxrt/` (`libstdc++.a`, `libgcc.a`, `libgcc_eh.a`, `libphcompat.a`, `cxx17test.a`) and
