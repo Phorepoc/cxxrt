@@ -15,7 +15,7 @@ Not part of this repository, fetched and built at build time (recipes/fetch_gcc.
   images and libraries built with them (including the LGPL ones, such as the browser engine) are not made GPL by it. The
   release is pinned by SHA-256 in gcc.lock.
 
-The Symbian OS and Open C headers it compiles against (EPL-1.0) come
+The Symbian OS and Open C headers it compiles against (EPL-1.0 upstream, EPL-2.0 where Phorepoc updated them) come
 from the Phorepoc core repository and are not copied here. The POSIX header overlay and the compiler wrappers are the pdk's
 (tools/toolchain/openc_posix, tools/toolchain/mk_pure_wrappers.sh).
 
