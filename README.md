@@ -17,11 +17,11 @@ once. Then build in the toolchain container:
 
 ```sh
 docker run --rm --cpus=6 -v "$PWD/..:/src" -e PHOREPOC_PDK=/src/pdk -e PHOREPOC_CORE=/src/core \
-    -e PHOREPOC_BUILD=/src/core/build -e PHOREPOC_ADAPTATIONS=/src/adaptation-x86-64 \
+    -e PHOREPOC_BUILD=/src/core/build -e PHOREPOC_ADAPTATIONS=/src/<adaptation> \
     -w /src/cxxrt ghcr.io/phorepoc/base bash build.sh
 ```
 
-Add `-e ARCH=arm` for the PinePhone, and set `PHOREPOC_ADAPTATIONS` to that device's repositories. The libraries end up
+Add `-e ARCH=arm` for an ARM board, and set `PHOREPOC_ADAPTATIONS` to that board's repositories. The libraries end up
 in `$PHOREPOC_BUILD/thirdparty/x86/cxxrt/` (or `arm/`), where other ports pick them up.
 
 There's a test program that exercises strings, containers, `std::function`, `optional`, `variant` and threads.

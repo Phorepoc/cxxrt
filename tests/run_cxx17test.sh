@@ -7,7 +7,7 @@
 #
 # On the host, with the pdk's `ph` on PATH, after `bash build.sh` (in the toolchain container):
 #   PHOREPOC_ADAPTATIONS=<board adaptations>:<cxxrt> PHOREPOC_RUN='<command>' bash tests/run_cxx17test.sh
-# PHOREPOC_RUN starts the built ROM on the board (QEMU, VirtualBox ...) and writes its serial log to stdout, e.g. a wrapper
+# PHOREPOC_RUN starts the built ROM on the board (an emulator, a VM ...) and writes its serial log to stdout, e.g. a wrapper
 # around the board's emulator command; it is not part of this repository. BOARD defaults to pc.
 set -eu
 : "${PHOREPOC_RUN:?set PHOREPOC_RUN to the command that boots the ROM and prints the serial log}"
