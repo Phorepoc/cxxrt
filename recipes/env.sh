@@ -5,7 +5,7 @@
 #   PHOREPOC_PDK     the pdk checkout (tools/openc_cflags.py, tools/toolchain/mk_pure_wrappers.sh)
 #   PHOREPOC_CORE    core (default: ../core); PHOREPOC_BUILD  all generated files (default: $PHOREPOC_CORE/build)
 #   ARCH             x32 (default) or arm
-# The include tree must be exported first (the pdk's tools/epoc32_export.py, `ph source export -a`).
+# The include tree must be exported first (the pdk's tools/epoc32_export.py, `phe source export -a`).
 #
 #   OUT   the archives: $PHOREPOC_BUILD/thirdparty/{x86,arm}/cxxrt  (what the registry entries link)
 #   W     the work dir of this architecture: the GCC source, the libstdc++ build tree, the compiler wrappers

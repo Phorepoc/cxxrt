@@ -12,7 +12,7 @@ and builds libstdc++ from it.
 
 ## Building
 
-Check out core and the [pdk](https://github.com/Phorepoc/pdk) next to this repository and run `ph source export -a`
+Check out core and the [pdk](https://github.com/Phorepoc/pdk) next to this repository and run `phe source export -a`
 once. Then build in the toolchain container:
 
 ```sh
