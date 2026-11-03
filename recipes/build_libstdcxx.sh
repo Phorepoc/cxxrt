@@ -51,6 +51,9 @@ make -C include > $OUT/make-inc.log 2>&1 || tail -5 $OUT/make-inc.log
 if [ "$ARCH" = arm ] && grep -q '__is_trivially_copyable(_To)' $B/include/bit; then
   sed -i 's/__is_trivially_copyable(\(_To\|_From\))/is_trivially_copyable_v<\1>/g' $B/include/bit
 fi
+if [ "$ARCH" = arm ] && grep -q '__has_trivial_destructor(_First)' $B/include/variant; then   # <variant>'s _Variadic_union: the same
+  sed -i 's/__has_trivial_destructor(\(_First\|_Variadic_union<_Rest\.\.\.>\))/is_trivially_destructible_v<\1>/g' $B/include/variant
+fi
 make -k -j${JOBS:-$(nproc)} > $OUT/make.log 2>&1
 echo "make exit $?"; grep -c "error:" $OUT/make.log
 # the archive is assembled by hand: -k leaves a few TUs out (std::filesystem dir ops, <chrono> tzdb, long-double math stubs:
