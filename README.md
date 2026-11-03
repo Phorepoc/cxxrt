@@ -1,8 +1,8 @@
 # cxxrt
 
 Symbian's C++ library dates from 2010, so modern C++ code can't use it. cxxrt fixes that for
-[Phorepoc](https://github.com/Phorepoc). It builds GCC 13.3's libstdc++, with C++17 and C++20, on top of Symbian's
-POSIX layer (Open C), and adds the POSIX functions Open C never had.
+[Phorepoc OS](https://github.com/Phorepoc). It builds GCC 13.3's libstdc++, with C++17 and C++20, on top of the
+system's POSIX layer (Open C), and adds the POSIX functions Open C never had.
 
 It's what lets big ports run at all. The WebKit engine in [webkit-symbian](https://github.com/Phorepoc/webkit-symbian)
 links it, and so does OpenH264 in [codecpack](https://github.com/Phorepoc/codecpack).
@@ -33,7 +33,7 @@ There's a test program that exercises strings, containers, `std::function`, `opt
 - `os/src/cxxrt/compat/` is that compatibility library, `libphcompat`. It adds C99 math, an aligned allocator for
   WebKit, `poll()` on top of `select()`, and the POSIX and BSD calls Open C is missing.
 - `os/src/cxxrt/ph_throw.cpp` logs an exception and stops the program with a clear reason. C++ exceptions don't work
-  across Symbian images yet, so a crash should at least say why.
+  across Phorepoc OS images yet, so a crash should at least say why.
 - `os/src/cxxrt/cxx17_test.cpp` is the test program, and `registry/components_cxxrt.py` registers it.
 
 ## License
