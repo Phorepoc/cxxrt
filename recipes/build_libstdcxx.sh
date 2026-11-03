@@ -46,6 +46,11 @@ fi
 echo configured
 cd $B
 make -C include > $OUT/make-inc.log 2>&1 || tail -5 $OUT/make-inc.log
+# GCC 14 (the ARM compiler) rejects the built-in __is_trivially_copyable in a function signature (<bit>'s std::bit_cast, libstdc++ 13);
+# GCC 14's own libstdc++ spells it with the library trait. The x32 compiler (GCC 13) accepts either.
+if [ "$ARCH" = arm ] && grep -q '__is_trivially_copyable(_To)' $B/include/bit; then
+  sed -i 's/__is_trivially_copyable(\(_To\|_From\))/is_trivially_copyable_v<\1>/g' $B/include/bit
+fi
 make -k -j${JOBS:-$(nproc)} > $OUT/make.log 2>&1
 echo "make exit $?"; grep -c "error:" $OUT/make.log
 # the archive is assembled by hand: -k leaves a few TUs out (std::filesystem dir ops, <chrono> tzdb, long-double math stubs:
