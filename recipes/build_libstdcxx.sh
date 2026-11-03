@@ -28,7 +28,7 @@ mapfile -t FL < <(python3 $PHOREPOC_PDK/tools/openc_cflags.py --exe $CFL | grep 
 [ "${#FL[@]}" -gt 10 ] || { echo "build_libstdcxx: openc_cflags.py failed (is the include tree exported, the build dir writable?)"; exit 1; }
 mkdir -p $W/bin
 for t in gcc g++; do   # libstdc++ own -I first (its cstdlib include_next must find stdapis AFTER it), the Open C line after "$@"
-  { echo "#!/bin/sh"; echo -n "exec $CROSS$t $MFL "'"$@"'" "; printf "'%s' " "${FL[@]}" "-I$OVR" -include $OVR/ph_cxx_compat.h -idirafter $GINC; echo; } > $W/bin/phe-$t; chmod +x $W/bin/phe-$t
+  { echo "#!/bin/sh"; echo -n "exec $CROSS$t $MFL "'"$@"'" "; printf "'%s' " "${FL[@]}" "-I$OVR" -include $OVR/ph_cxx_compat.h -idirafter $GINC; echo; } > $W/bin/ph-$t; chmod +x $W/bin/ph-$t
 done
 # os/newlib assumes newlib ctype tables; Open C ctype is functions -> take os/generic (self-built table) for the OS dir
 cp $S/libstdc++-v3/config/os/generic/* $S/libstdc++-v3/config/os/newlib/
