@@ -32,6 +32,19 @@ void* memalign(size_t align, size_t size)
     return ph_memalign(align, size);
 }
 
+/* posix_memalign(3): the alignment must be a power of two multiple of sizeof(void*) (xbyak's code buffers, dynarmic) */
+int posix_memalign(void** out, size_t align, size_t size)
+{
+    void* p;
+    if (align < sizeof(void*) || (align & (align - 1)))
+        return EINVAL;
+    p = ph_memalign(align, size);
+    if (!p)
+        return ENOMEM;
+    *out = p;
+    return 0;
+}
+
 void sincosf(float x, float* s, float* c)   /* volatile: else GCC folds sinf+cosf back into sincosf (see phmath.c sincos) */
 {
     volatile float y = x;
