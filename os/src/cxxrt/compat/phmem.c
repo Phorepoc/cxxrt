@@ -18,6 +18,15 @@
 
 typedef struct { void* raw; size_t size; } ph_hdr;
 
+/* a failed allocation is reported (the request + the heap's state) by the engine's Symbian shim when it has one (WebKit's
+   phebsym.cpp); weak, so a library without it links unchanged. Capped: try* callers may fail on purpose. */
+extern void ph_oom_report(size_t) __attribute__((weak));
+static int g_oom_reports;
+static void oom(size_t size)
+{
+    if (ph_oom_report && g_oom_reports < 16) { g_oom_reports++; ph_oom_report(size); }
+}
+
 static void* alloc_hdr(size_t align, size_t size)
 {
     char* raw; uintptr_t p; ph_hdr* h; size_t total;
@@ -25,7 +34,7 @@ static void* alloc_hdr(size_t align, size_t size)
     total = size + align + sizeof(ph_hdr);
     if (total < size) return NULL;
     raw = (char*)malloc(total);
-    if (!raw) return NULL;
+    if (!raw) { oom(total); return NULL; }
     p = ((uintptr_t)raw + sizeof(ph_hdr) + align - 1) & ~(uintptr_t)(align - 1);
     h = (ph_hdr*)p - 1; h->raw = raw; h->size = size;
     return (void*)p;
