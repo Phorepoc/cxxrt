@@ -1,5 +1,5 @@
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only WITH LicenseRef-Phorepoc-Build-Output-Exception-1.0
 
 r"""components_cxxrt -- the cxxrt layer's components (merged into core's registry when this repository is built:
 PHOREPOC_ADAPTATIONS=<board adaptations>:<cxxrt>, see the pdk's tools/emitter/paths.py).

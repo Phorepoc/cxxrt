@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 #
 # cmath_probe.sh -- lists what <cmath>/<cstdlib>/<cctype>/<cwchar> name that Open C's headers lack (with the C99 config macros
 # on): the work list for os/src/cxxrt/compat/. Inside the toolchain container, after build_libstdcxx.sh (x32).

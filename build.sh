@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 #
 # build.sh -- everything the registry entries link, for one architecture (ARCH=x32 default, or arm): libstdc++, libgcc,
 # libphcompat, and for x32 the cxx17test archive. Inside the toolchain container with PHOREPOC_PDK / PHOREPOC_CORE /

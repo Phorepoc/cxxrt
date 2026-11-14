@@ -1,5 +1,5 @@
 // Copyright The Phorepoc Authors
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-License-Identifier: AGPL-3.0-only
 
 // cxx17test.mmp -- a C++20 program on libstdc++ 13 (built from the GCC source over Open C by recipes/build_libstdcxx.sh):
 // std::string, containers, threads, exceptions. The standard-C++ part is a PREBUILT archive (recipes/build_cxxtest.sh ->

@@ -1,5 +1,5 @@
 // Copyright The Phorepoc Authors
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-License-Identifier: AGPL-3.0-only
 
 // cxx17_test.cpp -- a smoke test of the C++ runtime (libstdc++ 13) over Open C on Phorepoc (x32).
 #include <string>

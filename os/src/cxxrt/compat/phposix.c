@@ -1,5 +1,5 @@
 /* Copyright The Phorepoc Authors
- * SPDX-License-Identifier: Apache-2.0 */
+ * SPDX-License-Identifier: AGPL-3.0-only WITH LicenseRef-Phorepoc-Build-Output-Exception-1.0 */
 
 /* phposix.c -- POSIX/BSD calls the WebKit page stack references that Open C lacks (the link census of the webkit-symbian recipes,
  *). Each is either the real thing on top of what Open C/the kernel has, or a documented "not available". */

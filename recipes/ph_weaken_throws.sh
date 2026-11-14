@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 #
 # ph_weaken_throws.sh <libstdc++.a> -- make every std::__throw_* DEFINITION in the archive weak, so ph_throw.cpp's
 # strong ones (linked as an object of the image) replace them (build_libstdcxx.sh runs it; idempotent). Only the defining members

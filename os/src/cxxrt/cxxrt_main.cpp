@@ -1,5 +1,5 @@
 // Copyright The Phorepoc Authors
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-License-Identifier: AGPL-3.0-only WITH LicenseRef-Phorepoc-Build-Output-Exception-1.0
 
 // cxxrt_main.cpp -- Symbian side of the C++17 runtime test: main() runs the standard-C++ test and reports over RDebug (serial log).
 #include <e32std.h>

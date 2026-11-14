@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 #
 # build_phcompat.sh -- libphcompat.a (os/src/cxxrt/compat/*.c: POSIX and C99 functions Open C lacks) on the pure Open C
 # line. Inside the toolchain container, after build_libstdcxx.sh:  ARCH=x32|arm bash recipes/build_phcompat.sh

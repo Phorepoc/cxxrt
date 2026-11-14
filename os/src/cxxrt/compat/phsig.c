@@ -1,5 +1,5 @@
 /* Copyright The Phorepoc Authors
- * SPDX-License-Identifier: Apache-2.0 */
+ * SPDX-License-Identifier: AGPL-3.0-only WITH LicenseRef-Phorepoc-Build-Output-Exception-1.0 */
 
 /* phsig.c -- Open C has sigaction/sigemptyset only; the rest of <signal.h> sits behind
    SYMBIAN_OE_POSIX_SIGNALS and is not exported. sigset_t is a 64-bit mask. Signals are never *delivered* to JSC here (GC thread suspension is cooperative / Thread::suspend is unsupported), so the masks are pure bookkeeping. */

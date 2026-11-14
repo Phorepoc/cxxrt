@@ -1,5 +1,5 @@
 /* Copyright The Phorepoc Authors
- * SPDX-License-Identifier: Apache-2.0 */
+ * SPDX-License-Identifier: AGPL-3.0-only WITH LicenseRef-Phorepoc-Build-Output-Exception-1.0 */
 
 /* phpoll.c -- poll() over Open C's select(). Declared by overlay/poll.h. Descriptors >= FD_SETSIZE
  * or negative are skipped (negative = ignored per POSIX; too large = POLLNVAL). Timeout in ms, < 0 = wait forever. */

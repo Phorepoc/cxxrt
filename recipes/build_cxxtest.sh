@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 #
 # build_cxxtest.sh -- the C++17 test (os/src/cxxrt/cxx17_test.cpp) + the exception-registration glue (eh_register.cpp), compiled
 # against the libstdc++ headers of build_libstdcxx.sh, into $OUT/cxx17test.a for the `cxx17test` registry component.

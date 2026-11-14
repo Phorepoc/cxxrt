@@ -1,5 +1,5 @@
 /* Copyright The Phorepoc Authors
- * SPDX-License-Identifier: Apache-2.0 */
+ * SPDX-License-Identifier: AGPL-3.0-only WITH LicenseRef-Phorepoc-Build-Output-Exception-1.0 */
 
 /* phmath.c -- C99 <math.h> functions Open C's libm lacks (found by cmath_probe.sh / the JSC link census). */
 #include <math.h>

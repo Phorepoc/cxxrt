@@ -1,5 +1,5 @@
 /* Copyright The Phorepoc Authors
- * SPDX-License-Identifier: Apache-2.0 */
+ * SPDX-License-Identifier: AGPL-3.0-only WITH LicenseRef-Phorepoc-Build-Output-Exception-1.0 */
 
 /* phmem.c -- The allocator behind WebKit's FastMalloc (bmalloc's system-malloc mode is patched to call
    these): Open C's malloc is an RHeap with no aligned allocation and a free() that cannot take interior pointers, while JSC needs

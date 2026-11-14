@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 #
 # package_libgcc.sh -- libgcc.a / libgcc_eh.a of the container's compiler into $OUT, next to libstdc++.a (GPL-3.0 with the
 # GCC Runtime Library Exception: see NOTICE). Inside the toolchain container.

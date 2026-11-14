@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 #
 # try_compile.sh [file.cpp] -- probe: compile one C++ file for x32 with the Open C headers and the container's libstdc++ headers.
 # Inside the toolchain container; the include tree must be exported.

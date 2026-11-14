@@ -1,5 +1,5 @@
 // Copyright The Phorepoc Authors
-// SPDX-License-Identifier: Apache-2.0
+// SPDX-License-Identifier: AGPL-3.0-only WITH LicenseRef-Phorepoc-Build-Output-Exception-1.0
 
 // eh_register.cpp -- C++ exceptions in a Phorepoc (x32) E32 image: the link script (x32_exe_eh.ld) keeps .eh_frame inside the code
 // segment between __eh_frame_start and a zero terminator; this static constructor hands it to libgcc's unwinder

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 #
 # fetch_gcc.sh -- the pinned GCC release tarball (gcc.lock, SHA-256 checked) -> $PHOREPOC_BUILD/cxxrt-work/dl/.
 # build_libstdcxx.sh unpacks libstdc++-v3, libgcc and the licence texts from it.

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright The Phorepoc Authors
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 #
 # build_libstdcxx.sh -- libstdc++ (GCC 13.3 source, gcc.lock) for Symbian over Open C / P.I.P.S. headers. Inside the
 # toolchain container (ghcr.io/phorepoc/base; the ARM compiler is in it too):
