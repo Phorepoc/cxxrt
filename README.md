@@ -7,7 +7,7 @@ system's POSIX layer (Open C), and adds the POSIX functions Open C never had.
 It's what lets big ports run at all. The WebKit engine in [webkit-symbian](https://github.com/Phorepoc/webkit-symbian)
 links it, and so does OpenH264 in [codecpack](https://github.com/Phorepoc/codecpack).
 
-We don't keep a copy of GCC here. The recipe downloads the release named in `gcc.lock`, checks it against its SHA-256,
+This repository does not keep a copy of GCC. The recipe downloads the release named in `gcc.lock`, checks it against its SHA-256,
 and builds libstdc++ from it.
 
 ## Building
